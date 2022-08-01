@@ -28,14 +28,16 @@ let result4 = none([4, -5, 7, -1], function(n) {
 console.log(result4);   // false
 *******************************************************************************/
 
-let none = function() {
-
+let none = function (arr, cb1) {
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    const passes = cb1(arr[i], i);
+    if (passes) {
+      return false;
+    }
+  }
+  return true;
 };
-
-
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = none;
