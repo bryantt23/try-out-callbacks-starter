@@ -21,12 +21,13 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function() {
-
+let myForEach = function (arr, cb) {
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    const updated = cb(arr[i]);
+    arr[i] = updated;
+  }
 };
-
-
-
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myForEach;
