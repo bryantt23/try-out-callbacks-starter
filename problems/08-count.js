@@ -32,7 +32,7 @@ let count = function (arr, cb1) {
   for (let i = 0; i < n; i++) {
     const passes = cb1(arr[i]);
     if (passes) {
-      return ct++;
+      ct++;
     }
   }
   return ct;
